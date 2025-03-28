@@ -7,10 +7,11 @@ import bookRoutes from "./routes/bookRoutes.js";
 
 import {connectDB} from "./lib/db.js";
 
-job.start();
+
 const app = express();
 const port = process.env.PORT ;
 
+job.start();
 app.use(express.json());
 
 app.use("/api/auth",authRoutes);
