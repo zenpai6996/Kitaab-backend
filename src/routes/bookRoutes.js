@@ -8,7 +8,7 @@ const router = express.Router();
 //create book endpoint
 router.post("/",protectRoute ,async (req,res) =>{
     try{
-
+        console.log("User from token:",req.user);
         const {title,caption,image,rating} =req.body;
 
         if(!title || !caption || !image || !rating){
