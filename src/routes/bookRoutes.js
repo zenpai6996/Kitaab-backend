@@ -59,7 +59,7 @@ router.get("/",protectRoute,async(req,res) =>{
         books,
         currentPage:page,
         totalBooks:total,
-        totalPages:Math.ceil(totalbooks/limit)
+        totalPages:Math.ceil(totalBooks/limit)
     });
 
    } catch (error){
