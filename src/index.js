@@ -12,7 +12,7 @@ const app = express();
 const port = process.env.PORT ;
 
 job.start();
-app.use(express.json());
+app.use(express.json({ limit: '10mb' })); // Increase from default 100kb to 10MB
 
 app.use("/api/auth",authRoutes);
 app.use("/api/books",bookRoutes);
