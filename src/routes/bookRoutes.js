@@ -58,8 +58,8 @@ router.get("/",protectRoute,async(req,res) =>{
     res.send({
         books,
         currentPage:page,
-        totalBooks:total,
-        totalPages:Math.ceil(totalBooks/limit)
+        totalbooks:total,
+        totalPages:Math.ceil(total/limit)
     });
 
    } catch (error){
