@@ -89,7 +89,7 @@ try{
             username: user.username,
             profileImage: user.profileImage,
             email:user.email,
-            createdAt:user.createdAt
+            createdAt:user.createdAt,
         },
     })
 
