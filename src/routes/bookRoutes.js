@@ -45,9 +45,10 @@ router.get("/",protectRoute,async(req,res) =>{
     //const response = await fetch("http://localhost:3000/api/books?page=1&limit=5);
     try{
 
-        const page = req.query.page || 1;
-        const limit = req.query.limit || 3;
-        const skip = ( page - 1 )*limit;
+        const page = Number(req.query.page) || 1;
+        const limit = Number(req.query.limit) || 3;
+
+        const skip = ( page - 1 ) * limit;
 
         const books = await Book.find()
             .sort({createdAt:-1})
