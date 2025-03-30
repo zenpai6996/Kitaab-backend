@@ -55,7 +55,8 @@ router.post("/register",async (req,res)=>{
             _id: user._id,
             username: user.username,
             profileImage: user.profileImage,
-            email:user.email
+            email:user.email,
+            createdAt:user.createdAt,
         },
     });
   }catch(error){
@@ -87,7 +88,8 @@ try{
             _id: user._id,
             username: user.username,
             profileImage: user.profileImage,
-            email:user.email
+            email:user.email,
+            createdAt:user.createdAt
         },
     })
 
