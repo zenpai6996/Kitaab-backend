@@ -37,24 +37,35 @@ router.post("/",protectRoute ,async (req,res) =>{
     }
 })
 
+
 //recommended books endpoint
 //pagination => infinite scroll
 router.get("/",protectRoute,async(req,res) =>{
-    try {
-        const limit = parseInt(req.query.limit) || 5;
-        const lastBookId = req.query.lastBookId; // Get last book's ID from query
+    //example call:
+    //const response = await fetch("http://localhost:3000/api/books?page=1&limit=5);
+    try{
 
-        const query = lastBookId ? { _id: { $lt: lastBookId } } : {}; // Fetch books after last ID
+        const page = req.query.page || 1;
+        const limit = req.query.limit || 3;
+        const skip = ( page - 1 )*limit;
 
-        const books = await Book.find(query)
-            .sort({ _id: -1 }) // Get newest books first
+        const books = await Book.find()
+            .sort({createdAt:-1})
+            .skip(skip)
             .limit(limit)
-            .populate("user", "username profileImage");
+            .populate("user","username profileImage");//descendign order
 
-        res.status(200).json({ books });
-    } catch (error) {
-        console.log("Error fetching books", error);
-        res.status(500).json({ message: error.message });
+        const total = await Book.countDocuments();
+        res.send({
+            books,
+            currentPage:page,
+            total,
+            totalPages:Math.ceil(total/limit),
+        });
+
+    } catch (error){
+        console.log("Error fetching books",error);
+        res.status(500).json({message:error.message});
     }
 });
 
