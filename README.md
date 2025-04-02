@@ -21,7 +21,11 @@
   <img src="https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white">
 </p>
 
-[Frontend](https://github.com/zenpai6996/Kitaab-android)
+<div align="center">
+  
+[![GitHub Repo](https://badgen.net/badge/icon/github?icon=github&label=Kitaab%20Frontend)](https://github.com/zenpai6996/Kitaab-android)
+
+</div>
 
 ## 📖 About  
 Kitaab Backend is a **Node.js & Express.js** powered API that serves as the backend for the **Kitaab** book recommendation platform. It manages user authentication, book recommendations, and interactions between users. The database is built with **MongoDB**, and authentication is handled using **JWT**.
