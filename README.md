@@ -27,7 +27,7 @@
 
 </div>
 
-## 📖 About  
+## About  
 Kitaab Backend is a **Node.js & Express.js** powered API that serves as the backend for the **Kitaab** book recommendation platform. It manages user authentication, book recommendations, and interactions between users. The database is built with **MongoDB**, and authentication is handled using **JWT**.
 
 ## ✨ Features  
@@ -56,7 +56,7 @@ Kitaab Backend is a **Node.js & Express.js** powered API that serves as the back
 5. **Create a Pull Request**: Describe your changes and submit the pull request for review.
 
 <p align="right">
-  <a href="📖 About"><img src="https://img.shields.io/badge/Back%20to%20Top-%E2%86%91-blue" alt="Back to Top"></a>
+  <a href="About"><img src="https://img.shields.io/badge/Back%20to%20Top-%E2%86%91-blue" alt="Back to Top"></a>
 </p>
 
 
