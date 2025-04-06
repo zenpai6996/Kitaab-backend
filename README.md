@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/96c4c130-354c-4214-89b7-d98bc8f74ba8" alt="Kitaab Logo" width="180">
+  <img src="https://github.com/user-attachments/assets/96c4c130-354c-4214-89b7-d98bc8f74ba8" alt="Kitaab Logo" width="25%">
 </p>
 
 
